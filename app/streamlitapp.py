@@ -1,7 +1,7 @@
 # Import all of the dependencies
 import streamlit as st
 import os 
-import imageio 
+#import imageio 
 
 import tensorflow as tf 
 from utils import load_data, num_to_char
@@ -41,8 +41,8 @@ if options:
     with col2: 
         st.info('This is all the machine learning model sees when making a prediction')
         video, annotations = load_data(tf.convert_to_tensor(file_path))
-        imageio.mimsave('animation.gif', video, fps=10)
-        st.image('animation.gif', width=400) 
+        #imageio.mimsave('animation.gif', video, fps=10)
+        #st.image('animation.gif', width=400) 
 
         st.info('This is the output of the machine learning model as tokens')
         model = load_model()
