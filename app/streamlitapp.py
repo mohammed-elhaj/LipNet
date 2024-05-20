@@ -33,7 +33,7 @@ if options:
         os.system(f'ffmpeg -i {file_path} -vcodec libx264 test_video.mp4 -y')
 
         # Rendering inside of the app
-        video = open('test_video.mp4', 'rb') 
+        video = open('app/test_video.mp4', 'rb') 
         video_bytes = video.read() 
         st.video(video_bytes)
 
@@ -41,8 +41,8 @@ if options:
     with col2: 
         st.info('This is all the machine learning model sees when making a prediction')
         video, annotations = load_data(tf.convert_to_tensor(file_path))
-        #imageio.mimsave('animation.gif', video, fps=10)
-        #st.image('animation.gif', width=400) 
+        imageio.mimsave('animation.gif', video, fps=10)
+        st.image('animation.gif', width=400) 
 
         st.info('This is the output of the machine learning model as tokens')
         model = load_model()
