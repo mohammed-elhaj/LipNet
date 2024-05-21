@@ -40,8 +40,13 @@ def load_data(path: str):
     file_name = path.split('/')[-1].split('.')[0]
     # File name splitting for windows
     #file_name = path.split('\\')[-1].split('.')[0]
-    video_path = os.path.join('..','data','s1',f'{file_name}.mpg')
-    alignment_path = os.path.join('..','data','alignments','s1',f'{file_name}.align')
+    #video_path = os.path.join('..','data','s1',f'{file_name}.mpg')
+    #alignment_path = os.path.join('..','data','alignments','s1',f'{file_name}.align')
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the current script
+    video_path = os.path.join(script_dir, '..', 'data', 's1', f'{file_name}.mpg')
+    alignment_path = os.path.join(script_dir, '..', 'data', 'alignments', 's1', f'{file_name}.align')
+    
     frames = load_video(video_path) 
     alignments = load_alignments(alignment_path)
     
