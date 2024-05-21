@@ -30,7 +30,7 @@ def load_model() -> Sequential:
 
    # model.load_weights(os.path.join('..','models','checkpoint'))
     #checkpoint_dir = os.path.join('..', 'models')
-    checkpoint_dir = os.path.join('workspaces', 'LipNet', 'models', 'checkpoint')
+    checkpoint_dir = os.path.join('workspaces', 'LipNet', 'models', 'checkpoint.data-00000-of-00001')
 
     # Create a checkpoint instance that points to the folder where the checkpoints are saved
     checkpoint = tf.train.Checkpoint(model=model)
