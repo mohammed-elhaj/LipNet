@@ -43,7 +43,7 @@ if options:
 
 
         # Rendering inside of the app gpt 
-        video_path = os.path.join(script_dir, 'app', 'test_video.mp4')
+        video_path = os.path.join(script_dir,'test_video.mp4')
         with open(video_path, 'rb') as video:
             video_bytes = video.read()
         st.video(video_bytes)
