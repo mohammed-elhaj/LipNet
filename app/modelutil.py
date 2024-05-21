@@ -28,7 +28,7 @@ def load_model() -> Sequential:
 
     model.add(Dense(41, kernel_initializer='he_normal', activation='softmax'))
 
-   # model.load_weights(os.path.join('..','model','checkpoint'))
+   # model.load_weights(os.path.join('..','models','checkpoint'))
     checkpoint_dir = os.path.join('..', 'models')
 
     # Create a checkpoint instance that points to the folder where the checkpoints are saved
