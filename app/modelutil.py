@@ -19,10 +19,10 @@ def load_model() -> Sequential:
 
     model.add(TimeDistributed(Flatten()))
 
-    model.add(Bidirectional(LSTM(128, kernel_initializer='Orthogonal', return_sequences=True)))
+    model.add(Bidirectional(LSTM(128, kernel_initializer='orthogonal', return_sequences=True)))
     model.add(Dropout(.5))
 
-    model.add(Bidirectional(LSTM(128, kernel_initializer='Orthogonal', return_sequences=True)))
+    model.add(Bidirectional(LSTM(128, kernel_initializer='orthogonal', return_sequences=True)))
     model.add(Dropout(.5))
 
     model.add(Dense(41, kernel_initializer='he_normal', activation='softmax'))
