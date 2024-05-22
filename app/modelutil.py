@@ -29,7 +29,7 @@ def load_model() -> Sequential:
     model.add(Dense(41, kernel_initializer='he_normal', activation='softmax'))
 
    # model.load_weights(os.path.join('mount','src', 'lipnet', 'models', 'checkpoint.data-00000-of-00001'))
-    model.load_weights(os.path.join('.', 'models','checkpoint'), by_name=True, skip_mismatch=True)
+    model.load_weights(os.path.join( 'models','checkpoint'), by_name=True, skip_mismatch=True)
     
     # checkpoint_dir = os.path.join('..', 'models')
     # checkpoint = tf.train.Checkpoint(model=model)
