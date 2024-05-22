@@ -30,7 +30,7 @@ def load_model() -> Sequential:
 
    # model.load_weights(os.path.join('mount','src', 'lipnet', 'models', 'checkpoint.data-00000-of-00001'))
     script_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the current script
-    file_path = os.path.join(script_dir, '..', 'models')
+    file_path = os.path.join(script_dir, '..', 'models', 'checkpoint')
     model.load_weights(file_path)
     
     # checkpoint_dir = os.path.join('..', 'models')
