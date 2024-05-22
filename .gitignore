@@ -1,0 +1,5 @@
+# LipNet
+data/
+models/
+results/
+__pycache__/
